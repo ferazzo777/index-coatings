@@ -3,3 +3,134 @@
 //   Primary Navigation
 //
 // --------------------------------------------------------------------------
+
+$navigation-color: rgba($white, 0.7);
+$navigation-hover: rgba($white, 0.9);
+
+
+.primary-navigation-wrapper {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  width: 350px;
+  padding: 150px 35px 130px 0;
+
+  background: $yellow;
+  color: $navigation-color;
+
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+
+  a {
+    color: $navigation-color;
+
+    &:hover {
+      color: $navigation-hover;
+    }
+  }
+}
+
+  .primary-navigation-close {
+    position: absolute;
+    display: block;
+    right: 38px;
+    top: 80px;
+
+    font-size: 26px;
+    line-height: 0;
+
+    color: $dark-blue;
+
+    cursor: pointer;
+
+    transition: transform 600ms ease-in-out;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+
+// --------------------------------------------------------------------------
+//   Contact Details
+// --------------------------------------------------------------------------
+
+.primary-navigation-contact {
+  margin-top: 10px;
+
+  font-family: $bebas;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+  .primary-navigation-contact-link {
+    display: block;
+    vertical-align: middle;
+    line-height: 1.3;
+
+    .icon {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .icon-mail {
+      display: inline-block;
+      transform: rotate(-22deg);
+    }
+  }
+
+
+// --------------------------------------------------------------------------
+//   Social Links
+// --------------------------------------------------------------------------
+
+.primary-navigation-social {
+  margin-top: 20px;
+}
+
+  .primary-navigation-social-link {
+    display: inline-block;
+    font-size: 40px;
+  }
+
+
+// --------------------------------------------------------------------------
+//   Menu
+// --------------------------------------------------------------------------
+
+.primary-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+  .primary-navigation-menu-item {
+
+    a {
+      display: block;
+      font-family: $bebas;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 1.2;
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  //   Level 2+
+  // --------------------------------------------------------------------------
+
+  .primary-navigation-sub-menu {
+    margin-bottom: 5px;
+
+    list-style: none;
+
+    .primary-navigation-menu-item {
+
+      a {
+        display: block;
+        padding: 4px 0;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+    }
+  }

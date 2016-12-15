@@ -1,0 +1,83 @@
+// --------------------------------------------------------------------------
+//
+//  Forms
+//    Form elements, plugin styling
+//
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+//   Variables
+// --------------------------------------------------------------------------
+
+$form-element-border: 1px solid $base-border-color;
+
+
+// --------------------------------------------------------------------------
+//   Generic form elements
+// --------------------------------------------------------------------------
+
+form {
+
+  // ----- Remove default styling ----- //
+
+  ul,
+  ol,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  label {
+    font-weight: 600;
+  }
+}
+
+// ----- Buttons ----- //
+
+button,
+[type='button'],
+[type='submit'],
+[type='reset'] {
+  @include button;
+}
+
+// ----- Input types ----- //
+
+input[type="color"]
+input[type="date"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="email"]
+input[type="month"]
+input[type="number"]
+input[type="password"]
+input[type="search"]
+input[type="tel"]
+input[type="text"]
+input[type="time"]
+input[type="url"]
+input[type="week"]
+input:not([type])
+textarea,
+select {
+  max-width: 100%;
+  width: 100%;
+  border: $form-element-border;
+  padding: 5px 10px;
+  font-weight: normal;
+
+  &:hover {
+    background: $white;
+  }
+
+  &:focus {
+    background: $white;
+  }
+}
+
+[type='checkbox'],
+[type='radio'] {
+  margin-right: 10px;
+}

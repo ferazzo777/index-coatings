@@ -6,10 +6,9 @@
 
 @mixin button ($primary: $base-link-color, $content: $white) {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.2em;
   background-color: $primary;
-  border: 1px solid $primary;
-  border-radius: $base-border-radius;
+  border-radius: 6px;
   outline: 0;
   zoom: 1;
   cursor: pointer;
@@ -17,6 +16,7 @@
   user-drag: none;
 
   color: $content;
+  font-family: $bebas;
   white-space: nowrap;
   vertical-align: baseline;
   text-decoration: none;
@@ -25,16 +25,12 @@
 
   &:hover {
     outline: 0;
-    background: lighten($primary, 20%);
-    border-color: lighten($primary, 20%);
   }
 
-  &:active,
-  &.active {
+  &:active {
     outline: 0;
   }
 
-  &.disabled,
   &[disabled] {
     background-image: none;
     opacity: 0.4;
@@ -42,3 +38,40 @@
     box-shadow: none;
   }
 }
+
+.button {
+  @include button;
+}
+
+  .button--green {
+    background-color: $green;
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: $green;
+      color: $black;
+    }
+  }
+
+  .button--blue {
+    background-color: $blue;
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: $blue;
+      color: $black;
+    }
+  }
+
+  .button--dark-blue {
+    background-color: $dark-blue;
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: $dark-blue;
+      color: $black;
+    }
+  }

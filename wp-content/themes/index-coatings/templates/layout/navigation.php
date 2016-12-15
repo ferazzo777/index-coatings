@@ -1,7 +1,7 @@
 
   <nav class="primary-navigation-wrapper">
 
-    <i class="icon icon-cross primary-navigation-close js-primary-navigation-close"></i>
+    <i class="icon icon-cross primary-navigation-close js-primary-navigation-toggle"></i>
 
     <?php if (has_nav_menu('primary')) wp_nav_menu(array('theme_location' => 'primary')); ?>
 

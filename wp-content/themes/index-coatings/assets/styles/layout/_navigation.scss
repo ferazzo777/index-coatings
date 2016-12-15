@@ -13,6 +13,7 @@ $navigation-hover: rgba($white, 0.9);
   z-index: 100;
   right: 0;
   width: 350px;
+  transform: translateX(100%);
   padding: 150px 35px 130px 0;
 
   background: $yellow;
@@ -20,6 +21,12 @@ $navigation-hover: rgba($white, 0.9);
 
   text-align: right;
   -webkit-font-smoothing: antialiased;
+
+  transition: transform 600ms ease-in-out;
+
+  .js-primary-navigation-open & {
+    transform: translateX(0);
+  }
 
   a {
     color: $navigation-color;

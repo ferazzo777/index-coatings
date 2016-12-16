@@ -1,0 +1,30 @@
+// --------------------------------------------------------------------------
+//
+//   Partners Logos
+//
+// --------------------------------------------------------------------------
+
+.partners {
+  padding: 40px 30px;
+  background-color: $white;
+}
+
+  .partners-container {
+    @include center;
+
+  }
+
+  .partners-slider {
+
+  }
+
+    .partners-slider-slide {
+      width: 20%;
+      text-align: center;
+
+      .partners-slider-logo {
+        display: inline-block;
+      }
+    }
+
+

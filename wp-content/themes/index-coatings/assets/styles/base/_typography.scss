@@ -18,7 +18,7 @@ body {
   color: $base-body-color;
 
   text-rendering: optimizeLegibility;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: auto;
 
   @include media($mobile-down) {
     font-size: 14px;

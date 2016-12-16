@@ -12,16 +12,28 @@
   padding: 60px 30px;
   text-align: right;
 
+  @include media($mobile-down) {
+    text-align: right;
+    padding: 45px 30px;
+  }
 }
 
   .header-logo {
-    @include horizontal-align(absolute);
+    position: relative;
     top: -25px;
+
+    @include horizontal-align(absolute);
 
     transition: top 100ms ease-in-out;
 
     &:hover {
       top: -15px;
+    }
+
+    @include media($mobile-down) {
+      display: inline-block;
+      max-width: 300px;
+      width: 100%;
     }
   }
 
@@ -30,6 +42,17 @@
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
     font-size: 20px;
     vertical-align: middle;
+
+    @include media($mobile-down) {
+      position: absolute;
+      left: 30px;
+    }
+
+    @include media(max-width 600px) {
+      @include horizontal-align(absolute);
+      top: 170px;
+      width: 280px;
+    }
   }
 
   .header-menu-toggle {
@@ -43,10 +66,19 @@
     font-size: 24px;
     line-height: 0;
 
-
     cursor: pointer;
 
     &:before {
       -webkit-font-smoothing: auto;
+    }
+
+    @include media($mobile-down) {
+      top: 6px;
+    }
+
+    @include media(max-width 450px) {
+      @include horizontal-align(absolute);
+      top: 10px;
+      width: 250px;
     }
   }

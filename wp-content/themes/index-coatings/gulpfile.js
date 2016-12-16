@@ -171,7 +171,7 @@ gulp.task('scripts', () => {
     .pipe( plugins.babel({
       presets: ['latest']
     }))
-    .pipe( plugins.order( ['*jquery.js*', '*angular.js*', 'init.js'] ) )
+    // .pipe( plugins.order( ['*jquery.js*', '*angular.js*', 'init.js'] ) )
     .pipe( plugins.concat('global.js') )
     .pipe( plugins.sourcemaps.write( '.' ) )
     .pipe( gulp.dest( config.scripts ) )

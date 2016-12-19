@@ -1,0 +1,93 @@
+{
+    "key": "group_58577ebf1bd79",
+    "title": "Feature List",
+    "fields": [
+        {
+            "key": "field_58577ec6bb6fb",
+            "label": "Feature List",
+            "name": "feature_list",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_58577ed9bb6fc",
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Feature",
+            "sub_fields": [
+                {
+                    "key": "field_58577ed9bb6fc",
+                    "label": "Feature",
+                    "name": "feature",
+                    "type": "text",
+                    "instructions": "Use <strong><\/strong> for bold parts",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_58577ee0bb6fd",
+                    "label": "Colour",
+                    "name": "colour",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "white": "White",
+                        "blue": "Blue",
+                        "green": "Green",
+                        "yellow": "Yellow"
+                    },
+                    "default_value": [
+                        "white"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1482129221
+}

@@ -9,6 +9,8 @@ $('.gallery-slider').slick({
   dots: false,
   arrows: false,
   autoplay: true,
+  centerMode: true,
+  centerPadding: '0px',
 
   responsive: [{
 

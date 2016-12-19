@@ -33,6 +33,23 @@ if ( function_exists('acf_add_options_page') )
     'menu_title'   => 'SEO & Social',
     'parent_slug'   => 'birdbrain',
   ));
+
+  acf_add_options_sub_page(array(
+    'page_title'   => 'Layout',
+    'menu_title'   => 'Layout',
+    'parent_slug'   => 'birdbrain',
+  ));
+
+
+  acf_add_options_page(array(
+    'page_title'   => 'Testimonials',
+    'menu_title'  => 'Testimonials',
+    'menu_slug'   => 'testimonials',
+    'icon_url'    =>  'dashicons-groups',
+    'capability'  => 'edit_posts',
+    'redirect'    => true
+  ));
+
 }
 
 

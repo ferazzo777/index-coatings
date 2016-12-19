@@ -1,5 +1,157 @@
 // --------------------------------------------------------------------------
 //
-//  DO NOT EDIT DIRECTLY - RESERVED FOR GULP ICONS BUILD
+//  Icons
+//    DO NOT EDIT DIRECTLY - RESERVED FOR GULP ICONS BUILD
 //
 // --------------------------------------------------------------------------
+
+@font-face {
+  font-family: "icons";
+  src: url('../icons/font/icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon:before {
+  display: inline-block;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.icon-2x { font-size: 2em; }
+.icon-3x { font-size: 3em; }
+.icon-4x { font-size: 4em; }
+.icon-5x { font-size: 5em; }
+.icon-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+
+@mixin icon-arrow-left {
+  @include icon;
+  content: "\EA01";
+}
+
+@mixin icon-arrow-right {
+  @include icon;
+  content: "\EA02";
+}
+
+@mixin icon-burst {
+  @include icon;
+  content: "\EA03";
+}
+
+@mixin icon-caret-down {
+  @include icon;
+  content: "\EA04";
+}
+
+@mixin icon-caret-left {
+  @include icon;
+  content: "\EA05";
+}
+
+@mixin icon-caret-right {
+  @include icon;
+  content: "\EA06";
+}
+
+@mixin icon-corner {
+  @include icon;
+  content: "\EA07";
+}
+
+@mixin icon-cross {
+  @include icon;
+  content: "\EA08";
+}
+
+@mixin icon-envelope {
+  @include icon;
+  content: "\EA09";
+}
+
+@mixin icon-expand {
+  @include icon;
+  content: "\EA0A";
+}
+
+@mixin icon-facebook {
+  @include icon;
+  content: "\EA0B";
+}
+
+@mixin icon-filter {
+  @include icon;
+  content: "\EA0C";
+}
+
+@mixin icon-googleplus {
+  @include icon;
+  content: "\EA0D";
+}
+
+@mixin icon-linkedin {
+  @include icon;
+  content: "\EA0E";
+}
+
+@mixin icon-mail {
+  @include icon;
+  content: "\EA0F";
+}
+
+@mixin icon-menu {
+  @include icon;
+  content: "\EA10";
+}
+
+@mixin icon-phone {
+  @include icon;
+  content: "\EA11";
+}
+
+@mixin icon-twitter {
+  @include icon;
+  content: "\EA12";
+}
+
+
+.icon-arrow-left:before { content: "\EA01" }
+.icon-arrow-right:before { content: "\EA02" }
+.icon-burst:before { content: "\EA03" }
+.icon-caret-down:before { content: "\EA04" }
+.icon-caret-left:before { content: "\EA05" }
+.icon-caret-right:before { content: "\EA06" }
+.icon-corner:before { content: "\EA07" }
+.icon-cross:before { content: "\EA08" }
+.icon-envelope:before { content: "\EA09" }
+.icon-expand:before { content: "\EA0A" }
+.icon-facebook:before { content: "\EA0B" }
+.icon-filter:before { content: "\EA0C" }
+.icon-googleplus:before { content: "\EA0D" }
+.icon-linkedin:before { content: "\EA0E" }
+.icon-mail:before { content: "\EA0F" }
+.icon-menu:before { content: "\EA10" }
+.icon-phone:before { content: "\EA11" }
+.icon-twitter:before { content: "\EA12" }

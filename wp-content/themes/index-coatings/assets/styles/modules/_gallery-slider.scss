@@ -1,0 +1,61 @@
+// --------------------------------------------------------------------------
+//
+//   Gallery Slider
+//
+// --------------------------------------------------------------------------
+
+.gallery-slider {
+
+  &:before,
+  &:after {
+    @include vertical-align(absolute);
+    content: '';
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    pointer-events: none;
+  }
+
+  &:before {
+    left: 0;
+    border-width: 120px 0 120px 15px;
+    border-color: transparent transparent transparent $white;
+  }
+
+  &:after {
+    right: 0;
+    border-width: 120px 20px 120px 0;
+    border-color: transparent $white transparent transparent;
+  }
+}
+
+  .gallery-slider-header {
+    @include clearfix;
+    padding: 20px 30px;
+  }
+
+    .gallery-slider-title {
+      float: left;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .gallery-slider-link {
+      float: right;
+
+      color: $dark-blue;
+      font-family: $bebas;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1;
+
+      &:after {
+        @include icon-arrow-right;
+        margin-left: 5px;
+        vertical-align: middle;
+        font-size: 12px;
+        color: $blue;
+      }
+    }

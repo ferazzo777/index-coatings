@@ -10,20 +10,24 @@
 $black:               #000000;
 $charcoal:            #6f6f6f;
 $dark-gray:           #bebebe;
-$gray:                #dadada;
+$gray:                #E6E6E6;
 $light-gray:          #fefefe;
 $white:               #ffffff;
 
-$blue:                #74a9cf;
-$green:               #9c9c48;
-$yellow:              #ffd700;
+$blue:                #0094DA;
+$dark-blue:           #074F6B;
+$green:               #6DBB43;
+$yellow:              #F4B350;
 $red:                 #d78f8e;
 
 
 // ----- Typography ----- //
 
+$bebas: 'bebas';
+$aileron: 'aileron';
+
 $base-body-color:     $charcoal;
-$base-heading-color:  $black;
+$base-heading-color:  $dark-blue;
 
 $base-link-color:     $blue;
 $base-link-hover:     lighten($base-link-color, 20%);

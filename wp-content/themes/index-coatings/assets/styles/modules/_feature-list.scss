@@ -1,0 +1,65 @@
+// --------------------------------------------------------------------------
+//
+//   Feature List
+//
+// --------------------------------------------------------------------------
+
+.feature-list {
+  padding: 50px 20px;
+  background-color: $blue;
+  text-align: center;
+
+  @include media($mobile-down) {
+    padding: 20px;
+  }
+
+  &:after {
+    content: url('../images/since-2000.png');
+    position: absolute;
+    right: 0;
+    top: -80px;
+  }
+}
+
+  .feature-list-item {
+    display: inline-block;
+    padding: 0 30px;
+
+    color: $white;
+    text-transform: uppercase;
+    font-family: $bebas;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+    &:after {
+      @include icon-burst;
+      position: relative;
+      vertical-align: super;
+      top: -4px;
+      margin-left: 5px;
+    }
+
+    @include media($desktop-down) {
+      width: 40%;
+      margin-bottom: 10px;
+    }
+
+    @include media($tablet-down) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  $colours: (
+    'white':  $white,
+    'blue':   $dark-blue,
+    'green':  $green,
+    'yellow': $yellow,
+  );
+
+  @each $name, $colour in $colours {
+
+    .feature-list-item--#{$name}:after {
+      color: $colour;
+    }
+  }

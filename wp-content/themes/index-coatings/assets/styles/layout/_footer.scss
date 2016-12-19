@@ -3,3 +3,146 @@
 //  Footer
 //
 // --------------------------------------------------------------------------
+
+.footer {
+  background-color: $dark-blue;
+  padding: 40px 30px;
+
+  text-align: center;
+  color: $white;
+
+  @include media($mobile-down) {
+    padding: 20px;
+  }
+}
+
+  .footer-logo {
+
+  }
+
+  .footer-caption {
+    display: block;
+  }
+
+
+// --------------------------------------------------------------------------
+//   Contact Detail Columns
+// --------------------------------------------------------------------------
+
+.footer-contact {
+  @include clearfix;
+  margin-top: 30px;
+}
+
+  .footer-contact-column {
+    @include span-columns(6, block-collapse);
+    padding: 0 30px;
+
+    @include media($mobile-down) {
+      @include span-columns(4, block-collapse);
+      width: 100%;
+      padding: 30px 0;
+    }
+
+    &:first-child {
+      text-align: right;
+    }
+
+    &:last-child {
+      text-align: left;
+      border-left: 1px solid rgba(white, 0.2);
+
+      @include media($mobile-down) {
+        border-left: none;
+        border-top: 1px solid rgba(white, 0.2);
+      }
+    }
+
+  }
+
+    .footer-contact-detail {
+      display: block;
+      font-size: 24px;
+      font-family: $bebas;
+      line-height: 1.2;
+
+      @include media($mobile-down) {
+        text-align: center;
+      }
+    }
+
+    .footer-contact-detail--phone {
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+
+// --------------------------------------------------------------------------
+//   Social Links
+// --------------------------------------------------------------------------
+
+.footer-contact-social {
+  margin-top: 10px;
+  margin-right: 10px;
+
+  @include media($mobile-down) {
+    text-align: center;
+  }
+}
+
+  .footer-contact-social-link {
+    color: $white;
+    font-size: 30px;
+    margin-left: 3px;
+  }
+
+
+// --------------------------------------------------------------------------
+//   Form
+// --------------------------------------------------------------------------
+
+.footer-form {
+
+  @include media($mobile-down) {
+    text-align: center;
+  }
+}
+
+  .footer-form-field {
+    display: inline-block;
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid $white;
+    background-color: transparent;
+    color: $white;
+
+    @include placeholder {
+      color: rgba($white, 0.4);
+    }
+
+    @include media($mobile-down) {
+      max-width: none;
+    }
+  }
+
+
+// --------------------------------------------------------------------------
+//   Copyright
+// --------------------------------------------------------------------------
+
+.footer-copyright {
+  display: block;
+  margin-top: 40px;
+  font-size: 14px;
+  color: rgba($white, 0.4);
+
+  a {
+    color: rgba($white, 0.4);
+
+    @include media($mobile-down) {
+      display: block;
+    }
+  }
+}

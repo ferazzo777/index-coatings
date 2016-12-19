@@ -13,6 +13,8 @@ get_template_part('templates/layout/head'); ?>
 
 <?php include roots_template_path(); ?>
 
+<?php get_template_part('templates/layout/partners'); ?>
+
 <?php get_template_part('templates/layout/footer'); ?>
 
 <?php wp_footer(); ?>

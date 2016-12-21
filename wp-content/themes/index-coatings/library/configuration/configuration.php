@@ -34,8 +34,8 @@ update_option('large_size_h', 650);
 update_option('large_crop', 1);
 
 
-update_option('medium_size_w', 450);
-update_option('medium_size_h', 450);
+update_option('medium_size_w', 300);
+update_option('medium_size_h', 200);
 update_option('medium_crop', 1);
 
 

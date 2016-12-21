@@ -1,0 +1,130 @@
+// --------------------------------------------------------------------------
+//
+//   Gallery Template
+//
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+//   Filter
+// --------------------------------------------------------------------------
+
+.gallery-filter {
+  padding: 15px 40px;
+  border-bottom: 1px solid $gray;
+
+  text-transform: uppercase;
+  color: $dark-blue;
+  font-family: $bebas;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+
+.gallery-filter-dropdown {
+  position: relative;
+  float: right;
+
+  text-align: right;
+}
+
+  .gallery-filter-trigger {
+    color: $dark-blue;
+    cursor: pointer;
+    user-select: none;
+
+    .icon {
+      color: $blue;
+      font-size: 0.8em;
+    }
+  }
+
+  .gallery-filter-options {
+    // display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300%;
+    padding: 20px;
+
+    background-color: $yellow;
+
+    -webkit-font-smoothing: antialiased;
+  }
+
+    .gallery-filter-option {
+      display: block;
+      color: rgba($white, 0.8);
+      font-weight: bold;
+
+      cursor: pointer;
+      user-select: none;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+
+      &.active {
+        color: $charcoal;
+      }
+    }
+
+
+// --------------------------------------------------------------------------
+//   Gallery
+// --------------------------------------------------------------------------
+
+.gallery-wrapper {
+  padding: 50px 20px;
+}
+
+  .gallery {
+    @include clearfix;
+    @include center;
+    min-height: 300px;
+  }
+
+
+// --------------------------------------------------------------------------
+//   Gallery Item
+// --------------------------------------------------------------------------
+
+.gallery-item {
+  @include span-columns(3);
+  @include omega(4n);
+  position: relative;
+  margin-bottom: flex-gutter(12);
+  line-height: 0;
+
+  cursor: pointer;
+
+  transition: all 300ms;
+}
+
+  .gallery-item-title {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 10px;
+    background-color: $dark-blue;
+
+    color: $white;
+    line-height: 1.3;
+    font-size: 13px;
+
+    &:after {
+      @include icon-expand;
+      margin-left: 10px;
+      vertical-align: middle;
+      line-height: 1;
+      font-size: 0.9em;
+      color: $yellow;
+    }
+
+    .gallery-item:hover & {
+      display: block;
+    }
+  }

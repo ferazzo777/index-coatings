@@ -34,18 +34,20 @@ if ( function_exists('acf_add_options_page') )
     'parent_slug'   => 'birdbrain',
   ));
 
-  acf_add_options_sub_page(array(
-    'page_title'   => 'Layout',
-    'menu_title'   => 'Layout',
-    'parent_slug'   => 'birdbrain',
-  ));
-
-
   acf_add_options_page(array(
     'page_title'   => 'Testimonials',
     'menu_title'  => 'Testimonials',
     'menu_slug'   => 'testimonials',
     'icon_url'    =>  'dashicons-groups',
+    'capability'  => 'edit_posts',
+    'redirect'    => true
+  ));
+
+  acf_add_options_page(array(
+    'page_title'   => 'Global Sections',
+    'menu_title'  => 'Global Sections',
+    'menu_slug'   => 'global',
+    'icon_url'    =>  'dashicons-admin-generic',
     'capability'  => 'edit_posts',
     'redirect'    => true
   ));

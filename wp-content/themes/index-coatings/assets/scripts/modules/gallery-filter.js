@@ -12,15 +12,17 @@ $('.gallery-filter-trigger').on('click', (event) => {
 
 })
 
-$('.gallery-filter-option').on('click', function (event) {
+$('.gallery-filter-option').on('click', (event) => {
+
+  var selection = event.currentTarget
 
   event.preventDefault()
 
-  $(this).addClass('active')
+  $(selection).addClass('active')
 
-  $('.gallery-filter-option').not(this).removeClass('active')
+  $('.gallery-filter-option').not(selection).removeClass('active')
 
-  filterGallery($(this).data('type'))
+  filterGallery($(selection).data('type'))
 
 
 })

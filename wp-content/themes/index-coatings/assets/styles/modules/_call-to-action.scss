@@ -7,6 +7,10 @@
 .call-to-action {
   padding: 50px 20px;
 
+  @include media($mobile-down) {
+    padding: 20px;
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -42,6 +46,10 @@
     border: 1px solid $dark-gray;
     padding: 20px 200px 20px 25px;
 
+    @include media($mobile-down) {
+      padding: 20px;
+    }
+
     p {
       margin-bottom: 5px;
     }
@@ -51,4 +59,13 @@
     @include vertical-align(absolute)
     right: 30px;
     font-size: 1.2em;
+
+    @include media($mobile-down) {
+      position: relative;
+      display: block;
+      margin-top: 15px;
+      transform: none;
+      top: auto;
+      right: auto;
+    }
   }

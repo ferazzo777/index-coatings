@@ -11,6 +11,8 @@ get_template_part('templates/layout/head'); ?>
 
 <?php get_template_part('templates/layout/header');?>
 
+<?php if (!is_front_page()) get_template_part('templates/layout/page-hero');?>
+
 <?php include roots_template_path(); ?>
 
 <?php get_template_part('templates/layout/partners'); ?>

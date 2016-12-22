@@ -59,3 +59,19 @@
         color: $blue;
       }
     }
+
+
+// --------------------------------------------------------------------------
+//   Slides
+// --------------------------------------------------------------------------
+
+.gallery-slider-slide {
+  text-align: center;
+  line-height: 0;
+  background-color: $black;
+}
+
+  .slick-slide .gallery-slider-image {
+    display: inline-block;
+    max-height: 185px;
+  }

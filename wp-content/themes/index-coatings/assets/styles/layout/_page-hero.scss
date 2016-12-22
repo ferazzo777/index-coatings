@@ -5,8 +5,37 @@
 // --------------------------------------------------------------------------
 
 .page-hero {
-  min-height: 800px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  min-height: 320px;
+  padding-top: 220px;
+
+  pointer-events: none;
+
+  .home & {
+    min-height: 800px;
+  }
 }
+
+  .page-hero-background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: url(../images/content/home-hero-slide.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .internal & {
+      opacity: 0.5;
+    }
+  }
+
+  .page-hero-title {
+    text-align: center;
+    margin: 0;
+  }

@@ -18,11 +18,13 @@
 
   color: $content;
   font-family: $bebas;
+  font-weight: 400;
   white-space: nowrap;
   vertical-align: baseline;
   text-decoration: none;
   text-align: center;
   line-height: normal;
+  -webkit-font-smoothing: antialiased;
 
   &:hover {
     outline: 0;
@@ -37,6 +39,10 @@
     opacity: 0.4;
     cursor: not-allowed;
     box-shadow: none;
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
 

@@ -20,7 +20,7 @@
       <?php foreach ($gallery as $image) { ?>
 
         <div class="gallery-slider-slide">
-          <img class="gallery-slider-image" src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+          <img class="gallery-slider-image" src="<?php echo $image['sizes']['medium'] ?>" alt="<?php echo $image['title'] ?>">
         </div>
 
       <?php } ?>

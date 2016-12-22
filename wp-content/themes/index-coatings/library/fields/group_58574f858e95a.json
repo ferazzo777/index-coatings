@@ -1,13 +1,13 @@
 {
     "key": "group_58574f858e95a",
-    "title": "Work Examples",
+    "title": "Gallery Slider Panel",
     "fields": [
         {
             "key": "field_58574f8c96cff",
             "label": "Gallery Slider",
             "name": "gallery_slider",
             "type": "gallery",
-            "instructions": "",
+            "instructions": "Landscape images only!",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -50,5 +50,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482288352
+    "modified": 1482381079
 }

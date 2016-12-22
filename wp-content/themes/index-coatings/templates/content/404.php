@@ -14,8 +14,6 @@
         <li>Click the <a href="javascript:history.back()">Back</a> button</li>
       </ul>
 
-      <?php get_search_form(); ?>
-
     </div>
 
   </section>

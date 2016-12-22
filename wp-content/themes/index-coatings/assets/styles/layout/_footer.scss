@@ -103,12 +103,25 @@
 
 .footer-form {
 
-  @include media($mobile-down) {
-    text-align: center;
-  }
+
 }
 
-  .footer-form-field {
+.footer-contact-column {
+
+  .gform_body {
+
+    @include media($mobile-down) {
+      text-align: center;
+    }
+  }
+
+  .gfield_label {
+    display: none;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
     display: inline-block;
     width: 100%;
     max-width: 320px;
@@ -126,6 +139,11 @@
       max-width: none;
     }
   }
+
+  textarea {
+    height: 100px;
+  }
+}
 
 
 // --------------------------------------------------------------------------

@@ -1,0 +1,40 @@
+{
+    "key": "group_585b872d96738",
+    "title": "Quote Template",
+    "fields": [
+        {
+            "allow_multiple": 0,
+            "allow_null": 0,
+            "key": "field_585b873457aca",
+            "label": "Quote Form",
+            "name": "quote_form",
+            "type": "gravity_forms_field",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-quote.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1482393422
+}

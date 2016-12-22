@@ -1,0 +1,24 @@
+// --------------------------------------------------------------------------
+//
+//   Quote Form
+//
+// --------------------------------------------------------------------------
+
+.quote-form {
+
+  padding-bottom: 80px;
+  border-bottom: 1px solid $gray;
+
+  .gform_wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .gfield_label {
+    display: none;
+  }
+
+  .input-type-fileupload .gfield_label {
+    display: block;
+  }
+}

@@ -45,39 +45,102 @@ form {
 
 // ----- Input types ----- //
 
-input[type="color"]
-input[type="date"]
-input[type="datetime"]
-input[type="datetime-local"]
-input[type="email"]
-input[type="month"]
-input[type="number"]
-input[type="password"]
-input[type="search"]
-input[type="tel"]
-input[type="text"]
-input[type="time"]
-input[type="url"]
-input[type="week"]
-input:not([type])
+.input-type-fileupload,
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
 textarea,
 select {
   max-width: 100%;
+  min-height: 48px;
   width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+
   border: $form-element-border;
-  padding: 5px 10px;
+  border-radius: 0;
+
+  background-color: #F2F2F2;
+
+  font-size: 14px;
   font-weight: normal;
-
-  &:hover {
-    background: $white;
-  }
-
-  &:focus {
-    background: $white;
-  }
 }
 
 [type='checkbox'],
 [type='radio'] {
   margin-right: 10px;
+}
+
+select {
+  height: 40px;
+  border-radius: 0px;
+  -webkit-appearance: none;
+
+  line-height: 1;
+}
+
+.ginput_container_select {
+  position: relative;
+
+  &:after {
+    @include icon-caret-down;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 10px;
+  }
+}
+
+
+textarea {
+  margin-bottom: 10px;
+}
+
+
+.input-type-fileupload {
+  @include span-columns(12);
+
+  .gfield_label {
+    display: inline-block !important; // WHAT
+    margin-right: 20px;
+    color: $dark-gray;
+  }
+}
+  .ginput_container_fileupload {
+    display: inline-block;
+  }
+
+
+// --------------------------------------------------------------------------
+//   Alignment classes
+// --------------------------------------------------------------------------
+
+.gf_left_half {
+  @include span-columns(6);
+}
+
+.gf_right_half {
+  @include span-columns(6);
+  @include omega;
+}
+
+
+// --------------------------------------------------------------------------
+//   Honeypot
+// --------------------------------------------------------------------------
+
+.input-type-honeypot {
+  display: none;
 }

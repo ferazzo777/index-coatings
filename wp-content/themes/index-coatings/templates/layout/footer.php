@@ -25,12 +25,15 @@
         </div>
 
         <div class="footer-contact-column">
-          <form class="footer-form" action="">
-            <input class="footer-form-field" type="text" name="" placeholder="Your name">
-            <input class="footer-form-field" type="text" name="" placeholder="Your email">
-            <textarea class="footer-form-field" placeholder="Message"></textarea>
-            <input type="submit" class="button" name="Send" value="Send">
-          </form>
+
+          <?php
+
+          $form_object = get_field('footer_form', 'options');
+          gravity_form_enqueue_scripts($form_object['id'], true);
+          gravity_form($form_object['id'], false, false, false, '', false, 1);
+
+          ?>
+
         </div>
 
       </div>

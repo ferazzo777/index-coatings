@@ -156,6 +156,4 @@ wp-content/vendor/
 # composer.lock
 .htaccess
 
-wp-config.php
-
 secrets.json.example

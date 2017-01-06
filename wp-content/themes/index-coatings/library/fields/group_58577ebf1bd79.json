@@ -3,25 +3,13 @@
     "title": "Feature List",
     "fields": [
         {
-            "key": "field_58577ec6bb6fb",
-            "label": "Feature List",
-            "name": "feature_list",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_58577ed9bb6fc",
-            "min": "",
-            "max": "",
-            "layout": "table",
-            "button_label": "Add Feature",
             "sub_fields": [
                 {
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "key": "field_58577ed9bb6fc",
                     "label": "Feature",
                     "name": "feature",
@@ -33,43 +21,26 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_58577ee0bb6fd",
-                    "label": "Colour",
-                    "name": "colour",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "white": "White",
-                        "blue": "Blue",
-                        "green": "Green",
-                        "yellow": "Yellow"
-                    },
-                    "default_value": [
-                        "white"
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
+                    }
                 }
-            ]
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Feature",
+            "collapsed": "field_58577ed9bb6fc",
+            "key": "field_58577ec6bb6fb",
+            "label": "Feature List",
+            "name": "feature_list",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -89,5 +60,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482129221
+    "modified": 1483604255
 }

@@ -21,12 +21,29 @@
   }
 }
 
+@mixin big-center {
+  @include outer-container;
+
+  @include media($large-desktop-up) {
+    width: $desktop;
+  }
+
+  @include media($tablet-down) {
+    width: $tablet;
+  }
+
+  @include media($mobile-down) {
+    max-width: $mobile;
+    width: auto;
+  }
+}
+
 
 .wrapper {
   display: block;
   position: relative;
 }
 
-  .container {
-    @include center;
-  }
+.container {
+  @include center;
+}

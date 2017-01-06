@@ -3,3 +3,105 @@
 //  Home Page
 //
 // --------------------------------------------------------------------------
+
+.services-intro {
+  @include fill-parent();
+  @include row(table);
+  .service {
+    @include span-columns(2);
+    @include pad();
+    @include transition(all 0.2s ease-in-out);
+    position: relative;
+    @include media($desktop) {
+      display: block;
+      width:100%;
+    }
+    .service-link {
+      display: block;
+      &:after {
+        content:'';
+        position: absolute;
+        opacity:0;
+        top:0;
+        right:10px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid $dark-blue;
+        -ms-transform: rotate(-45deg); /* IE 9 */
+        -webkit-transform: rotate(-45deg); /* Safari */
+        transform: rotate(-45deg);
+      }
+    }
+    h3{
+      position: relative;
+      z-index: 2;
+      color:$white;
+      font-size: 1.8em;
+      line-height: 100%;
+      width:150px;
+      display: inline-block;
+      text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+    }
+    .content {
+      opacity:0;
+      position: relative;
+      z-index: 2;
+      max-height:190px;
+      overflow-y: hidden;
+      //@include transition(all 0.1s ease-in-out);
+      p {
+        color:$white;
+      }
+      a {
+        @include button;
+      }
+    }
+    .background-image {
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      opacity:0.8;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
+    &:nth-child(1n) {
+      background-color: $yellow;
+    }
+    &:nth-child(2n) {
+      background-color: $green;
+    }
+    &:nth-child(3n) {
+      background-color: $blue;
+    }
+    &:nth-child(4n) {
+      background-color: $dark-blue;
+    }
+
+  }
+  .active {
+    @include span-columns(3);
+    .content{
+      opacity:1;
+      @include transition(all 1s ease-in-out);
+    }
+    .background-image {
+      opacity:0.1;
+      @include transition(all 1s ease-in-out);
+    }
+    .service-link {
+      &:after {
+        opacity:1;
+        @include transition(all 0.4s ease-in-out);
+      }
+    }
+    &:hover {
+      .service-link {
+        &:after {
+          border-left: 20px solid $white;
+        }
+      }
+    }
+  }
+}

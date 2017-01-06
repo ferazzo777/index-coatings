@@ -25,17 +25,17 @@ if ( function_exists('acf_add_options_page') )
   acf_add_options_sub_page(array(
     'page_title'   => 'Contact Information',
     'menu_title'   => 'Contact Information',
-    'parent_slug'   => 'birdbrain',
+    'parent_slug'  => 'birdbrain',
   ));
 
   acf_add_options_sub_page(array(
     'page_title'   => 'SEO & Social',
     'menu_title'   => 'SEO & Social',
-    'parent_slug'   => 'birdbrain',
+    'parent_slug'  => 'birdbrain',
   ));
 
   acf_add_options_page(array(
-    'page_title'   => 'Testimonials',
+    'page_title'  => 'Testimonials',
     'menu_title'  => 'Testimonials',
     'menu_slug'   => 'testimonials',
     'icon_url'    =>  'dashicons-groups',
@@ -44,10 +44,19 @@ if ( function_exists('acf_add_options_page') )
   ));
 
   acf_add_options_page(array(
-    'page_title'   => 'Global Sections',
+    'page_title'  => 'Global Sections',
     'menu_title'  => 'Global Sections',
     'menu_slug'   => 'global',
     'icon_url'    =>  'dashicons-admin-generic',
+    'capability'  => 'edit_posts',
+    'redirect'    => true
+  ));
+
+  acf_add_options_page(array(
+    'page_title'  => 'Gallery',
+    'menu_title'  => 'Gallery',
+    'menu_slug'   => 'gallery',
+    'icon_url'    => 'dashicons-images-alt2',
     'capability'  => 'edit_posts',
     'redirect'    => true
   ));

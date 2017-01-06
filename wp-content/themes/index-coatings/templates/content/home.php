@@ -21,7 +21,7 @@
           </div>
           <div class="background-image" style="background-image: url(<?php echo get_sub_field('service_background_image')['url'];?>)"></div>
         </div>
-      <?
+      <?php
       endwhile;
     ?>
 

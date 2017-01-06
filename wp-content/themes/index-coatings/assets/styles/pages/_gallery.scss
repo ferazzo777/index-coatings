@@ -79,13 +79,13 @@
 
 .gallery-wrapper {
   padding: 50px 20px;
+  border-bottom: 1px solid #E6E6E6;
 }
 
-  .gallery {
-    @include clearfix;
-    @include center;
-    min-height: 300px;
-  }
+.gallery {
+  @include outer-container(1200px);
+  min-height: 300px;
+}
 
 
 // --------------------------------------------------------------------------

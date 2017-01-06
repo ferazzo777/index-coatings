@@ -6,15 +6,17 @@
 
 .gallery-slider {
 
+  max-width: 6000px;
+  margin: 0 auto;
+
   &:before,
   &:after {
     @include vertical-align(absolute);
     content: '';
-    z-index: 100;
+    z-index: 8;
     width: 0;
     height: 0;
     border-style: solid;
-
     pointer-events: none;
   }
 
@@ -29,49 +31,61 @@
     border-width: 120px 20px 120px 0;
     border-color: transparent $white transparent transparent;
   }
-}
 
-  .gallery-slider-header {
-    @include clearfix;
-    padding: 20px 30px;
+  .slick-prev, .slick-next {
+    z-index: 99;
+    height:100%;
+    &:before {
+      content:'';
+    }
   }
 
-    .gallery-slider-title {
-      float: left;
-      margin: 0;
-      font-weight: 300;
-    }
+  .slick-prev {
+    left: 0;
+  }
 
-    .gallery-slider-link {
-      float: right;
+  .slick-next {
+    right: 0;
+  }
 
-      color: $dark-blue;
-      font-family: $bebas;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 1;
+  .gallery-slider-slide {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .gallery-slider-image {
+    //width: 100vw;
+    //height: 100vh;
+    object-fit: cover;
+  }
 
-      &:after {
-        @include icon-arrow-right;
-        margin-left: 5px;
-        vertical-align: middle;
-        font-size: 12px;
-        color: $blue;
-      }
-    }
-
-
-// --------------------------------------------------------------------------
-//   Slides
-// --------------------------------------------------------------------------
-
-.gallery-slider-slide {
-  text-align: center;
-  line-height: 0;
-  background-color: $black;
 }
 
-  .slick-slide .gallery-slider-image {
-    display: inline-block;
-    max-height: 185px;
+.gallery-slider-header {
+  @include clearfix;
+  padding: 20px 30px;
+}
+
+.gallery-slider-title {
+  float: left;
+  margin: 0;
+  font-weight: 300;
+}
+
+.gallery-slider-link {
+  float: right;
+  color: $dark-blue;
+  font-family: $bebas;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+
+  &:after {
+    @include icon-arrow-right;
+    margin-left: 5px;
+    vertical-align: middle;
+    font-size: 12px;
+    color: $blue;
   }
+}

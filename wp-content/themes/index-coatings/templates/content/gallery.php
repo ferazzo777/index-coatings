@@ -1,3 +1,15 @@
+  <?php $gallery = get_field( 'gallery', 'options' );
+  $types = array();
+  foreach ($gallery as $type):
+    $type_array = $type['type'];
+    foreach ($type_array as $type_pin){
+      $types[$type_pin->ID] = array(
+        'post_title' => $type_pin->post_title,
+        'post_name' => $type_pin->post_name
+      );
+    }
+  endforeach;
+  ?>
 
   <section class="gallery-filter">
 
@@ -10,19 +22,13 @@
       <div class="gallery-filter-options">
 
         <a data-type="all" class="gallery-filter-option active" value="all">All</a>
-
         <?php
-
         // --------------------------------------------------------------------------
         //   Get Types
         // --------------------------------------------------------------------------
 
-        $types_field = get_field_object('field_5859e9f7131bc');
-        $types = $types_field['choices'];
-        $types = array_map('sanitize_title', $types);
-
-        foreach ($types as $label => $type) {
-          echo "<a data-type='$type' class='gallery-filter-option' value='$type'>$label</a>";
+        foreach ($types as $type) {
+          echo '<a data-type="'.$type['post_name'].'" class="gallery-filter-option" value="'.$type['post_name'].'">'.$type['post_title'].'</a>';
         }
 
         ?>
@@ -34,23 +40,34 @@
   </section>
 
 
-  <?php if (have_rows('gallery')) { ?>
+
+
+  <?php if ($gallery) { ?>
 
   <section class="gallery-wrapper">
 
     <div class="gallery">
 
-      <?php while (have_rows('gallery')) { the_row(); ?>
+      <?php foreach ($gallery as $image): ?>
 
-        <?php $image = get_sub_field( 'image' ); ?>
-        <?php $type = sanitize_title(get_sub_field( 'type' )) ?>
+      <?php
+      $types = '';
+      $url = $image['image'];
+      $title = $image['title'];
+      $type = $image['type'];
+      $type_array = $image['type'];
 
-        <a class="gallery-item all <?php echo $type ?>" data-featherlight="<?php echo $image['url'] ?>">
-          <img class="gallery-item-image" src="<?php echo $image['sizes']['medium'] ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>">
-          <span class="gallery-item-title"><?php the_sub_field( 'title' ); ?></span>
+      foreach ($type_array as $type_pin){
+        $types .= $type_pin->post_name . ' ';
+      }
+      ?>
+
+        <a class="gallery-item all <?php echo $types ?>" data-featherlight="<?php echo $url['url'] ?>">
+          <img class="gallery-item-image" src="<?php echo $url['sizes']['medium'] ?>" alt="<?php echo $url['alt']; ?>" title="<?php echo $url['title'] ?>">
+          <span class="gallery-item-title"><?php echo $image['title']; ?></span>
         </a>
 
-      <?php } ?>
+      <?php endforeach; ?>
 
     </div>
 

@@ -48,18 +48,24 @@
       width: 100%;
       padding: 0;
     }
-  }
-
-  $colours: (
-    'white':  $white,
-    'blue':   $dark-blue,
-    'green':  $green,
-    'yellow': $yellow,
-  );
-
-  @each $name, $colour in $colours {
-
-    .feature-list-item--#{$name}:after {
-      color: $colour;
+    &:nth-child(1n) {
+      &:after {
+        color: $dark-blue;
+      }
+    }
+    &:nth-child(2n) {
+      &:after {
+        color: $white;
+      }
+    }
+    &:nth-child(3n) {
+      &:after {
+        color: $green;
+      }
+    }
+    &:nth-child(4n) {
+      &:after {
+        color: $yellow;
+      }
     }
   }

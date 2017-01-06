@@ -46,3 +46,9 @@ function add_filters($tags, $function) {
     add_filter($tag, $function);
   }
 }
+
+function pre ( $data ) {
+
+	echo '<pre>' . print_r( $data, true ) . '</pre>';
+
+}

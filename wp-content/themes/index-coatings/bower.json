@@ -9,6 +9,7 @@
     "mediaCheck": "",
     "matchHeight": "",
     "neat": "^1.8.0",
+    "bourbon": "",
     "normalize-scss": "^3.0.3",
     "slick-carousel": "slick.js#^1.6.0",
     "featherlight": "^1.6.1"

@@ -3,25 +3,18 @@
     "title": "Gallery",
     "fields": [
         {
-            "key": "field_5859e9abbb928",
-            "label": "Gallery",
-            "name": "gallery",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_5859e9f3131bb",
-            "min": "",
-            "max": "",
-            "layout": "table",
-            "button_label": "Add Image",
             "sub_fields": [
                 {
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": 25,
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "key": "field_5859e9e4131ba",
                     "label": "Image",
                     "name": "image",
@@ -33,19 +26,14 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    }
                 },
                 {
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "key": "field_5859e9f3131bb",
                     "label": "Title",
                     "name": "title",
@@ -54,53 +42,62 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "25",
                         "class": "",
                         "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    }
                 },
                 {
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "min": "",
+                    "max": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "elements": "",
+                    "return_format": "object",
                     "key": "field_5859e9f7131bc",
                     "label": "Type",
                     "name": "type",
-                    "type": "radio",
+                    "type": "relationship",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
-                    },
-                    "choices": {
-                        "Commercial Painting": "Commercial Painting",
-                        "Residential Painting": "Residential Painting",
-                        "Roof Painting": "Roof Painting",
-                        "Wall Papering": "Wall Papering",
-                        "Anti Graffitti": "Anti Graffitti",
-                        "Epoxy Coatings": "Epoxy Coatings"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 1,
-                    "save_other_choice": 0,
-                    "default_value": "",
-                    "layout": "vertical",
-                    "return_format": "value"
+                    }
                 }
-            ]
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Image",
+            "collapsed": "field_5859e9f3131bb",
+            "key": "field_5859e9abbb928",
+            "label": "Gallery",
+            "name": "gallery",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "options_page",
                 "operator": "==",
-                "value": "template-gallery.php"
+                "value": "gallery"
             }
         ]
     ],
@@ -112,5 +109,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482288324
+    "modified": 1483605396
 }

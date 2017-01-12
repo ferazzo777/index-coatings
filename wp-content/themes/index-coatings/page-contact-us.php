@@ -12,6 +12,6 @@
 
 </div>
 
-<div class="clear line-break"></div>
+<div class="clear line-break line"></div>
 
 <?php get_template_part('templates/modules/form'); ?>

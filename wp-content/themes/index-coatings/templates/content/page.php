@@ -1,8 +1,13 @@
+<?php if (!is_front_page()){ ?>
 <section class="breadcrumbs">
   <?php
   echo breadcrumbs();
   ?>
 </section>
+<?php } ?>
+
+<?php get_template_part('templates/modules/gallery-slider'); ?>
+
   <section class="wrapper page-content">
 
     <div class="container">

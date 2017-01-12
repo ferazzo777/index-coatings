@@ -1,4 +1,4 @@
-
+<?php if ( !is_page( 'contact-us' ) ){ ?>
   <section class="wrapper call-to-action">
 
     <div class="call-to-action-content">
@@ -12,3 +12,4 @@
     </div>
 
   </section>
+<?php } ?>

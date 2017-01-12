@@ -1,4 +1,8 @@
-
+<section class="breadcrumbs">
+  <?php
+  echo breadcrumbs();
+  ?>
+</section>
   <section class="wrapper page-content">
 
     <div class="container">

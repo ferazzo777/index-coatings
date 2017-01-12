@@ -20,9 +20,9 @@ function hibiki_body_classes($classes) {
 
   global $post;
 
-  if (!is_home() && is_single() && $post) {
+  //if (!is_home() && is_single() && $post) {
     $classes[] = get_post_type($post->ID) . '-' . $post->post_name;
-  }
+  //}
 
 
   // --------------------------------------------------------------------------

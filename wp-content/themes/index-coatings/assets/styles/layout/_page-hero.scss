@@ -8,13 +8,11 @@
   position: relative;
   min-height: 320px;
   padding-top: 220px;
-
   pointer-events: none;
 
   .home & {
     min-height: 650px;
   }
-}
 
   .page-hero-background {
     position: absolute;
@@ -38,4 +36,50 @@
   .page-hero-title {
     text-align: center;
     margin: 0;
+  }
+
+}
+
+
+
+
+  .head-slider {
+    position: relative;
+    z-index: -1;
+    min-height: 320px;
+    pointer-events: none;
+    height:70vh;
+    .slick-slide {
+      height:70vh;
+      width:100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .home-hero-title {
+    top:0;
+    padding-top: 190px;
+    height:70vh;
+    width:100%;
+    position: absolute;
+    z-index: -1;
+
+    .inner {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      .wrapper {
+        padding: 10px 30px;
+        display: inline-block;
+        background:rgba(254,254,254,0.8);
+        h1 {
+          margin-bottom: 0.2em;
+        }
+      }
+    }
   }

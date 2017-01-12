@@ -5,8 +5,8 @@
 // --------------------------------------------------------------------------
 
 $('.gallery-slider').slick({
-  //slidesToScroll: 3,
-  infinite: false,
+
+  infinite: true,
   autoplay: true,
   autoplaySpeed: 3000,
   arrows: true,
@@ -14,8 +14,9 @@ $('.gallery-slider').slick({
   dots: false,
   //centerMode: true,
   placeholders: false,
-  speed: 300,
+  speed: 800,
   slidesToShow: 5,
+  slidesToScroll: 1,
 
   responsive: [
     {

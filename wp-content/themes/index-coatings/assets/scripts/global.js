@@ -14277,8 +14277,8 @@ var filterGallery = function filterGallery(something) {
 // --------------------------------------------------------------------------
 
 $('.gallery-slider').slick({
-  //slidesToScroll: 3,
-  infinite: false,
+
+  infinite: true,
   autoplay: true,
   autoplaySpeed: 3000,
   arrows: true,
@@ -14286,8 +14286,9 @@ $('.gallery-slider').slick({
   dots: false,
   //centerMode: true,
   placeholders: false,
-  speed: 300,
+  speed: 800,
   slidesToShow: 5,
+  slidesToScroll: 1,
 
   responsive: [{
     breakpoint: 1790,
@@ -14321,6 +14322,23 @@ $('.services-intro .service').hover(function () {
   $('.services-intro .service').removeClass('active');
   //add active state
   $(this).addClass('active');
+});
+'use strict';
+
+// --------------------------------------------------------------------------
+//
+//   Gallery Slider
+//
+// --------------------------------------------------------------------------
+
+$('.head-slider').slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dots: false,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
 });
 'use strict';
 

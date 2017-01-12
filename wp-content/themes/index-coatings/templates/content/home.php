@@ -1,8 +1,21 @@
-  <section class="page-hero">
+  <section class="head-slider">
 
-    <div class="page-hero-background" style="background-image: url(<?php image_directory() ?>/content/home-hero-slide.jpg)"></div>
+    <?php $home_gallery = get_field('slider');
+    if( $home_gallery ): ?>
+        <?php foreach( $home_gallery as $image ): ?>
+            <div style="background-image: url(<?php echo $image['url']; ?>)"></div>
+        <?php endforeach; ?>
+    <?php endif; ?>
 
   </section>
+
+  <div class="home-hero-title">
+    <div class="inner">
+      <div class="wrapper container">
+        <?php echo get_field('intro_text');?>
+      </div>
+    </div>
+  </div>
 
   <section class="services-intro">
 

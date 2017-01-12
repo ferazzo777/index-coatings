@@ -1,16 +1,18 @@
 {
-    "key": "group_585b872d96738",
-    "title": "Form Template",
+    "key": "group_5876da4ead1b8",
+    "title": "Google Map",
     "fields": [
         {
-            "allow_multiple": 0,
-            "allow_null": 0,
-            "key": "field_585b873457aca",
-            "label": "Form",
-            "name": "form",
-            "type": "gravity_forms_field",
+            "height": "",
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "key": "field_5876da5a73ed2",
+            "label": "Google Map",
+            "name": "google_map",
+            "type": "google_map",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -22,19 +24,19 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "page"
+                "value": "13"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484188912
+    "modified": 1484184179
 }

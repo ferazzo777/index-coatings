@@ -31,3 +31,23 @@ body {
   position: relative;
   width: 100%;
 }
+
+.half {
+  @include span-columns(6);
+  @include omega(2n);
+
+  @include media($mobile) {
+    @include span-columns(12);
+    @include omega();
+  }
+}
+
+.clear {
+  clear:both;
+  width:100%;
+  display: block;
+}
+
+.line-break {
+  height:60px;
+}

@@ -9,7 +9,7 @@
 
       <div class="footer-contact">
 
-        <div class="footer-contact-column">
+        <div class="footer-contact-column<?php echo is_page( 'contact-us' ) || is_page( 'get-a-quote' ) ? '-noform' : '';?>">
 
           <span class="footer-contact-detail footer-contact-detail--phone"><?php the_field( 'phone_number', 'options' ); ?></span>
           <span class="footer-contact-detail footer-contact-detail--email"><?php the_field( 'email_address', 'options' ); ?></span>
@@ -24,17 +24,20 @@
 
         </div>
 
+        <?php if ( !is_page( 'contact-us' ) && !is_page( 'get-a-quote' ) ){ ?>
         <div class="footer-contact-column">
 
           <?php
 
-          $form_object = get_field('footer_form', 'options');
-          gravity_form_enqueue_scripts($form_object['id'], true);
-          gravity_form($form_object['id'], false, false, false, '', false, 1);
+            $form_object = get_field('footer_form', 'options');
+            gravity_form_enqueue_scripts($form_object['id'], true);
+            gravity_form($form_object['id'], false, false, false, '', false, 1);
 
           ?>
 
         </div>
+
+        <?php } ?>
 
       </div>
 

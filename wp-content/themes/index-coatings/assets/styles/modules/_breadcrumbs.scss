@@ -1,0 +1,16 @@
+.breadcrumbs {
+  text-align: center;
+  line-height: 60px;
+  border-bottom: solid 1px #eee;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  a {
+    color:$dark-gray;
+    &:hover {
+      color:$charcoal;
+    }
+  }
+  span {
+    color:$gray;
+  }
+}

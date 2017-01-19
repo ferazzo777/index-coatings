@@ -1095,31 +1095,33 @@ table {
   }
 }
 
-.birdbrain-credit:after {
-  display: inline-block;
-  content: '';
-  width: 6px;
-  height: 11px;
-  background: url("../images/birdbrain-bolt.svg");
-  margin-left: 4px;
-  margin-bottom: 2px;
-  opacity: 0.4;
+.birdbrain-credit {
+  /*
+   &:after {
+    display: inline-block;
+    content:'';
+    width:6px;
+    height:11px;
+    background: url('../images/birdbrain-bolt.svg');
+    margin-left: 4px;
+    margin-bottom: 2px;
+    opacity:0.4;
+  }*/
 }
 
 .birdbrain-credit:hover {
   color: rgba(255, 255, 255, 0.7);
   transition: all 0.4s ease-in-out;
-}
-
-.birdbrain-credit:hover:after {
-  animation-name: slideDown;
-  -webkit-animation-name: slideDown;
-  animation-duration: 0.4s;
-  -webkit-animation-duration: 0.4s;
-  animation-timing-function: ease;
-  -webkit-animation-timing-function: ease;
-  visibility: visible !important;
-  opacity: 0.7;
+  /*&:after {
+      animation-name: slideDown;
+    	-webkit-animation-name: slideDown;
+    	animation-duration: 0.4s;
+    	-webkit-animation-duration: 0.4s;
+    	animation-timing-function: ease;
+    	-webkit-animation-timing-function: ease;
+    	visibility: visible !important;
+      opacity:0.7;
+    }*/
 }
 
 .header {
@@ -1229,10 +1231,10 @@ body::after {
   z-index: 900;
   right: 0;
   width: 350px;
-  height: 100%;
+  height: 100vh;
   -ms-transform: translateX(100%);
       transform: translateX(100%);
-  padding: 150px 35px 130px 0;
+  padding: 120px 0 35px 0;
   background: #F4B350;
   color: rgba(255, 255, 255, 0.75);
   text-align: right;
@@ -1256,11 +1258,11 @@ body::after {
   transition: all 0.1s ease-in-out;
 }
 
-.primary-navigation-close {
+.primary-navigation-wrapper .primary-navigation-close {
   position: absolute;
   display: block;
   right: 38px;
-  top: 80px;
+  top: 70px;
   font-size: 26px;
   line-height: 0;
   color: #074F6B;
@@ -1268,9 +1270,15 @@ body::after {
   transition: transform 200ms ease-in-out;
 }
 
-.primary-navigation-close:hover {
+.primary-navigation-wrapper .primary-navigation-close:hover {
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
+}
+
+.primary-navigation-wrapper .scroll {
+  overflow-y: scroll;
+  max-height: 100%;
+  padding-right: 35px;
 }
 
 .primary-navigation-contact {
@@ -2432,19 +2440,19 @@ textarea {
   border-left: 20px solid #ffffff;
 }
 
-.page-services .page-content ul {
+.sub-page-list {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
-.page-services .page-content ul li {
+.sub-page-list li {
   margin-bottom: 5px;
   display: inline-block;
 }
 
-.page-services .page-content ul li a {
+.sub-page-list li a {
   display: inline-block;
   padding: 0.5em 1.2em;
   background-color: #0094DA;
@@ -2470,26 +2478,26 @@ textarea {
   font-size: 1.5em;
 }
 
-.page-services .page-content ul li a:hover {
+.sub-page-list li a:hover {
   outline: 0;
 }
 
-.page-services .page-content ul li a:active {
+.sub-page-list li a:active {
   outline: 0;
 }
 
-.page-services .page-content ul li a[disabled] {
+.sub-page-list li a[disabled] {
   background-image: none;
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-.page-services .page-content ul li a strong {
+.sub-page-list li a strong {
   font-weight: 600;
 }
 
-.page-services .page-content ul li a:hover {
+.sub-page-list li a:hover {
   background: #074F6B;
 }
 
@@ -2667,22 +2675,32 @@ textarea {
 
   .header {
     text-align: right;
-    padding: 45px 30px;
+    padding: 35px 20px;
   }
 
   .header-logo {
     display: inline-block;
-    max-width: 300px;
+    max-width: 200px;
     width: 100%;
   }
 
   .header-cta {
     position: absolute;
     left: 30px;
+    display: none;
   }
 
-  .header-menu-toggle {
-    top: 6px;
+  .primary-navigation-wrapper {
+    padding: 90px 0 35px 0;
+  }
+
+  .primary-navigation-wrapper .primary-navigation-close {
+    top: 35px;
+    right: 20px;
+  }
+
+  .primary-navigation-wrapper .scroll {
+    padding-right: 20px;
   }
 
   .container {
@@ -2700,7 +2718,6 @@ textarea {
 
   .call-to-action-button {
     position: relative;
-    display: block;
     margin-top: 15px;
     -ms-transform: none;
         transform: none;
@@ -2746,17 +2763,6 @@ textarea {
 
   .half:last-child {
     margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .header-menu-toggle {
-    position: absolute;
-    left: 50%;
-    -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-    top: 10px;
-    width: 250px;
   }
 }
 

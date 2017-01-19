@@ -14,7 +14,7 @@
 
   @include media($mobile-down) {
     text-align: right;
-    padding: 45px 30px;
+    padding: 35px 20px;
   }
 }
 
@@ -32,7 +32,7 @@
 
     @include media($mobile-down) {
       display: inline-block;
-      max-width: 300px;
+      max-width: 200px;
       width: 100%;
     }
   }
@@ -46,6 +46,7 @@
     @include media($mobile-down) {
       position: absolute;
       left: 30px;
+      display: none;
     }
 
     @include media(max-width 600px) {
@@ -73,12 +74,12 @@
     }
 
     @include media($mobile-down) {
-      top: 6px;
+      //top: 6px;
     }
 
     @include media(max-width 450px) {
-      @include horizontal-align(absolute);
-      top: 10px;
-      width: 250px;
+      //@include horizontal-align(absolute);
+    //  top: 10px;
+    //  width: 250px;
     }
   }

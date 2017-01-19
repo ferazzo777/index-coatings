@@ -216,6 +216,7 @@
 }
 
 .birdbrain-credit {
+  /*
    &:after {
     display: inline-block;
     content:'';
@@ -225,11 +226,11 @@
     margin-left: 4px;
     margin-bottom: 2px;
     opacity:0.4;
-  }
+  }*/
   &:hover {
     color: rgba($white, 0.7);
     @include transition(all 0.4s ease-in-out);
-    &:after {
+    /*&:after {
       animation-name: slideDown;
     	-webkit-animation-name: slideDown;
     	animation-duration: 0.4s;
@@ -238,6 +239,6 @@
     	-webkit-animation-timing-function: ease;
     	visibility: visible !important;
       opacity:0.7;
-    }
+    }*/
   }
 }

@@ -79,6 +79,7 @@ $navigation-hover: rgba($white, 0.9);
     @include media($mobile-down) {
       padding-right: 20px;
     }
+    &::-webkit-scrollbar { width: 0 !important }
   }
 }
 

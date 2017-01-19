@@ -2571,6 +2571,10 @@ textarea {
 
   /* */
 
+  blockquote {
+    width: 50%;
+  }
+
   .container {
     width: 680px;
   }
@@ -2629,6 +2633,11 @@ textarea {
     font-size: 14px;
   }
 
+  blockquote {
+    width: 100%;
+    float: none;
+  }
+
   .container {
     max-width: 480px;
     width: auto;
@@ -2683,6 +2692,7 @@ textarea {
   }
 
   .header-logo {
+    top: -5px;
     display: inline-block;
     max-width: 200px;
     width: 100%;

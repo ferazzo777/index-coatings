@@ -1,20 +1,16 @@
-.page-services {
-  .page-content {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin:0;
-      text-align: center;
-      li {
-        margin-bottom: 5px;
-        display: inline-block;
-        a {
-          @include button;
-          font-size: 1.5em;
-          &:hover {
-            background:$dark-blue;
-          }
-        }
+.sub-page-list {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  text-align: center;
+  li {
+    margin-bottom: 5px;
+    display: inline-block;
+    a {
+      @include button;
+      font-size: 1.5em;
+      &:hover {
+        background:$dark-blue;
       }
     }
   }

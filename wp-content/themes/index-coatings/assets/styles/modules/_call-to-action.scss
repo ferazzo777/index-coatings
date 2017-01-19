@@ -62,7 +62,6 @@
 
     @include media($mobile-down) {
       position: relative;
-      display: block;
       margin-top: 15px;
       transform: none;
       top: auto;

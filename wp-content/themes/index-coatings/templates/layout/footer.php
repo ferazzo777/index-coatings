@@ -41,7 +41,7 @@
 
       </div>
 
-      <div class="footer-copyright">&copy; <?php echo date('Y'); ?> All Rights Reserved <?php bloginfo('name'); ?> Pty Ltd | <a target="_blank" href="https://www.birdbrain.com.au/">Website by BirdBrain</a></div>
+      <div class="footer-copyright">&copy; <?php echo date('Y'); ?> All Rights Reserved <?php bloginfo('name'); ?> Pty Ltd <?php if (is_front_page()) :?> <span class="divide">|</span> Website by <a target="_blank" href="https://www.birdbrain.com.au/" class="birdbrain-credit"><b>BirdBrain</b></a><?php endif;?></div>
 
     </div>
 
